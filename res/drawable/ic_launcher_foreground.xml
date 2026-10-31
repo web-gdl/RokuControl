@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <!-- Cuerpo del control -->
+    <path android:fillColor="#8B6CFF"
+        android:pathData="M40,24h28a8,8 0 0 1 8,8v44a8,8 0 0 1 -8,8h-28a8,8 0 0 1 -8,-8v-44a8,8 0 0 1 8,-8z" />
+    <!-- Cruceta -->
+    <path android:fillColor="#0E1014"
+        android:pathData="M54,36m-9,0a9,9 0 1,1 18,0a9,9 0 1,1 -18,0" />
+    <!-- Botones -->
+    <path android:fillColor="#0E1014"
+        android:pathData="M44,56h8v6h-8z M56,56h8v6h-8z M44,68h8v6h-8z M56,68h8v6h-8z" />
+</vector>

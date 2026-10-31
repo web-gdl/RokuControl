@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ECP de Roku usa HTTP sin cifrar en el puerto 8060 de la red local.
+     Android no permite listar rangos de IP, por eso se permite texto claro de forma general;
+     la restricción real a IPv4 privadas está en el código (ecp/Hosts.java) y se verifica en las pruebas. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

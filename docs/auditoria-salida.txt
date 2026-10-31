@@ -1,0 +1,29 @@
+APK: out/RokuControl-1.0.0.apk
+1. Permisos (esperados: INTERNET, ACCESS_NETWORK_STATE, CHANGE_WIFI_MULTICAST_STATE)
+     uses-permission: name='android.permission.INTERNET'
+     uses-permission: name='android.permission.ACCESS_NETWORK_STATE'
+     uses-permission: name='android.permission.CHANGE_WIFI_MULTICAST_STATE'
+  ok   solo esos 3 permisos
+  ok   sin service declarados
+  ok   sin receiver declarados
+  ok   sin provider declarados
+  ok   una sola actividad
+  ok   allowBackup desactivado (datos no salen en copias de seguridad)
+2. Contenido del APK
+AndroidManifest.xml classes.dex res resources.arsc 
+  ok   sin bibliotecas nativas
+  ok   sin assets
+  ok   un único classes.dex
+3. Clases incluidas (solo código propio, sin SDK ni bibliotecas)
+     clases propias: 69
+     paquetes java/android referenciados: ['Landroid/app', 'Landroid/content', 'Landroid/graphics', 'Landroid/net', 'Landroid/os', 'Landroid/text', 'Landroid/util', 'Landroid/view', 'Landroid/widget', 'Ljava/io', 'Ljava/lang', 'Ljava/net', 'Ljava/nio', 'Ljava/util']
+  ok   no hay clases de terceros
+4. Cadenas sospechosas en el código y los recursos
+  ok   ninguna cadena de analítica, publicidad o rastreo
+  ok   ninguna URL en el código
+     direcciones IP literales en el código: 192.168.1.20 239.255.255.250 
+  ok   solo el grupo multicast SSDP (239.255.255.250) y el ejemplo de ayuda 192.168.1.20 (texto, no se contacta)
+5. Red
+  ok   texto claro permitido solo por la config de seguridad (ECP usa HTTP); destinos limitados por código a IPv4 privadas
+
+RESULTADO: sin hallazgos

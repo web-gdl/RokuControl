@@ -1,0 +1,71 @@
+Direcciones
+  ok   192.168.1.20 es local
+  ok   10.0.0.5 es local
+  ok   172.16.0.1 y 172.31.255.1 son locales
+  ok   172.32.0.1 NO es local
+  ok   169.254.1.1 (enlace local) es local
+  ok   8.8.8.8 se rechaza
+  ok   127.0.0.1 se rechaza
+  ok   octeto 300 se rechaza
+  ok   texto/hostname se rechaza
+  ok   con puerto o ruta se rechaza
+  ok   destino permitido: local o el propio tel·fono, nada m·s
+  ok   vac·o/null se rechaza
+  ok   normaliza espacios y ceros
+Lectura de respuestas
+  ok   TV: nombre con entidades
+  ok   TV: volumen y energ·a soportados (is-tv)
+  ok   TV en espera no figura encendida
+  ok   Reproductor: sin volumen ni energ·a
+  ok   Reproductor: nombre cae al modelo
+  ok   Campos de Roku OS 15 tienen prioridad
+  ok   Respuesta que no es de Roku se rechaza
+  ok   Entidad externa no se expande
+  ok   Apps: ordenadas y filtradas
+Cliente ECP
+  ok   device-info por GET
+  ok   apps: 3 v·lidas (la de id inv·lido se descarta)
+  ok   keypress usa POST
+  ok   literal ASCII
+  ok   literal espacio = %20 (no '+')
+  ok   literal & codificado
+  ok   literal · en UTF-8
+  ok   literal emoji en UTF-8
+  ok   launch por POST
+  ok   tecla con caracteres inv·lidos se rechaza antes de enviar
+  ok   id de app inv·lido se rechaza antes de enviar
+  ok   403 se reconoce como acceso denegado
+  ok   respuesta que no es Roku se informa
+  ok   respuesta enorme se corta
+  ok   Roku apagado: error de comunicaci·n sin colgarse
+B·squeda SSDP
+  ok   respuesta v·lida · IP
+  ok   IP p·blica en LOCATION se ignora
+  ok   otro ST se ignora
+  ok   NOTIFY/otro m·todo se ignora
+  ok   M-SEARCH con ST: roku:ecp enviado
+  ok   descubre una sola IP aunque conteste varias veces
+Controlador (Roku simulado en 127.0.0.1:8060)
+  ok   reconecta solo al ·ltimo dispositivo
+  ok   detecta Roku TV con volumen y energ·a
+  ok   lista marca el dispositivo en uso y en l·nea
+  ok   tecla Home llega al Roku
+  ok   texto llega como Lit_
+  ok   TV encendido: bot·n de energ·a env·a PowerOff
+  ok   403 muestra c·mo habilitar el control
+  ok   al caer el Roku pasa a reconectando
+  ok   la lista lo marca fuera de l·nea
+  ok   al volver se reconecta solo
+  ok   olvidar borra el dispositivo y desconecta
+  ok   IP p·blica se rechaza con aviso y no selecciona nada
+  ok   select() tambi·n rechaza destinos fuera de la red local
+  ok   conexi·n por IP guarda el dispositivo
+  ok   solo se guardan serie, IP y nombre
+  ok   reproductor: sin volumen ni energ·a
+  ok   reproductor: energ·a avisa que no est· soportada y no env·a nada
+  ok   TV en espera detectado
+  ok   TV en espera: energ·a env·a PowerOn
+  ok   sin dispositivo avisa y no falla
+  ok   solo se usan rutas ECP (query, keypress, launch)
+
+64 correctas, 0 con fallo
